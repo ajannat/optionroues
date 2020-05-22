@@ -37,8 +37,46 @@
           .services{
               padding: 5px 5px;
               margin: 5px 5px;
-              /* background-color: blue; */
-              border: 1px solid #ed3e61;
+              color: #273a41;
+              font-size: 17px;
+              background-color: #ed3e61;
+              border: 1px solid #273a41;
+              /*ed3e61 e5e1d1 273a41*/
+          }
+          .service-section{
+              /* min-height: 50vh; */
+              color: #273a41;
+            /* background-image: url("images/bike.png"); */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;
+          }
+          .form-section{
+              background-color: #273a41;
+          }
+          #service-form{color: #fff;
+              padding: 20px 30px;
+              background-color: #fff;
+              box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  background: url('images/speedometer.png') no-repeat center;
+          }
+          .service-form-description p{
+              color: #fff;
+          }
+          .top{
+            background-color: #ed3e61
+          }
+          .contact p{
+              font-size: 20px;
+              color: #273a41;
           }
       </style>
   </head>
@@ -47,7 +85,8 @@
   
       <div class="body-content">
           <!-- header -->
-      <div class="header-section" style="background-color: mediumaquamarine">
+      <div class="top">
+      <div class="header-section pt-4" style="">
           <!-- <div class="row"> -->
               <div class="col-4 offset-4">
                   <div class="logo text-center">
@@ -58,32 +97,28 @@
           </div>
       </div>
     <!-- Header Part Start -->
-    <!-- <header class="header-partt header-two"> -->
-      <div class="container">
-          <div class="row d-sm-flex align-items-sm-center">
-              <div class="col-12 text-center">
-                  <div class="">
+    <header class="pt-2" style="">
+      <div class="contact">
+          <div class="align-items-sm-center">
+              <div class="text-center">
                       <p class="pl-0"><i class="fa fa-phone"></i> 06.31.31.30.73</p>
-                  </div>
               </div>
-              <div class="col-12 text-center">
-                  <div class="">
+              <div class="text-center">
                       <p><i class="fa fa-envelope"></i> option2roues@gmail.com</p>
-                  </div>
               </div>
           </div>
       </div>
-  <!-- </header> -->
+  </header>
   <!-- Header Part End -->
   
   <!-- service section -->
-      <div class="service-section my-3">
+      <div class="service-section py-4" style="">
           <h3 class="text-center">Prestations de service</h3>
           <div class="row m-0 p-0">
-              <div class="col-sm-4">
+              <div class="col-sm-2">
                   <!-- <img src="images/scooter.png" alt=""> -->
               </div>
-              <div class="col-sm-4 text-center">
+              <div class="col-sm-8 text-center">
                   <div class="row">
                       <div class="col-sm-6"><p class="services">Accidenté</p></div>
                       <div class="col-sm-6"><p class="services">Dépannage</p></div>
@@ -93,21 +128,28 @@
                       <div class="col-sm-6"><p class="services">Service Rapide</p></div>
                   </div>
               </div>
-              <div class="col-sm-4">
-                  <!-- <img src="images/bike.png" alt=""> -->
+              <div class="col-sm-2">
+                  <!-- <img src="images/service.png" alt=""> -->
               </div>
           </div>
       </div>
+      </div>
   
-      <div class="container">
-          <div class="service-form-heading text-center mb-4">
-              <h3>Demander votre devis en ligne!</h3>
-              <p>Il vous suffit juste de répondre aux questions suivantes, et notre équipe vous
-                  renverra un devis complètement personnalisé, par e-mail, dans les heures qui
-                  suivent!</p>
-          </div>
-          <div class="service-form" style="width: 60%; margin: auto auto">
-          <form>
+      <div class="form-section">
+          <div class="form-sizing">
+            <div class="service-form-heading text-white text-center mb-4 pt-4">
+                <h3>Demander votre devis en ligne!</h3>
+                <!-- <p>Il vous suffit juste de répondre aux questions suivantes, et notre équipe vous
+                    renverra un devis complètement personnalisé, par e-mail, dans les heures qui
+                    suivent!</p> -->
+            </div>
+          <form id="service-form">
+            <div class="service-form-description text-center mb-4">
+                <!-- <h3>Demander votre devis en ligne!</h3> -->
+                <p>Il vous suffit juste de répondre aux questions suivantes, et notre équipe vous
+                    renverra un devis complètement personnalisé, par e-mail, dans les heures qui
+                    suivent!</p>
+            </div>
               <div class="form-group">
                   <label for="prenom">Votre nom et prénom?</label>
                   <input type="text" class="form-control" id="prenom" placeholder="" required>
