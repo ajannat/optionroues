@@ -1,10 +1,7 @@
 /*------------------------------------------------------------------
   
-  Theme Name: Imgra - Immigration Business Consultancy Services Agency Template
-  Author: ThemeIM
-  Theme URI: http://themeim.com/demo/imgra/
-  Author URI: http://themeim.com
-  Description: Imgra-Business cunsultancy and Immigration Agency  Template
+  Author: ajannat
+  Description: MotorBike Repair Service Template
   Version: 1.0.0
   Tags:     advising, advisor, broker, business, clean, company, consultancy, consulting, corporate , investments, services 
 
@@ -71,6 +68,7 @@
 
             @import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i";
             @import "https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700";
+            @import "https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap";
 
 
 
@@ -113,7 +111,7 @@
                 -webkit-font-variant-ligatures: none;
                 text-rendering: optimizeLegibility;
                 -moz-osx-font-smoothing: grayscale;
-                font-smoothing: antialiased;
+                /* font-smoothing: antialiased; */
                 -webkit-font-smoothing: antialiased;
                 text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
             }

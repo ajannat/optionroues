@@ -38,7 +38,8 @@
               padding: 5px 5px;
               margin: 5px 5px;
               color: #273a41;
-              font-size: 17px;
+              font-size: 20px;
+              font-family: auto;
               background-color: #ed3e61;
               /* border: 1px solid #273a41; */
               /*ed3e61 e5e1d1 273a41*/
@@ -46,12 +47,17 @@
           .service-section{
               /* min-height: 50vh; */
               color: #273a41;
+              font-weight: bold;
             /* background-image: url("images/bike.png"); */
             background-repeat: no-repeat;
             background-position: center center;
             background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: 100%;
+          }
+          .service-section h2{
+              font-weight: bold;
+            font-family: 'Playfair Display', serif;
           }
           .form-section{
               background-color: #273a41;
@@ -83,21 +89,21 @@
   
   <body>
   
-      <div class="body-content">
+      <div id="body-content">
           <!-- header -->
       <div class="top">
-      <div class="header-section pt-4" style="">
+      <div class="header-section pt-4">
           <!-- <div class="row"> -->
               <div class="col-4 offset-4">
                   <div class="logo text-center">
-                      <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""></a>
+                      <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
                       <!-- <a class="navbar-brand" href="index.php"><img src="images/chain.png" alt=""></a> -->
                   </div>
               <!-- </div> -->
           </div>
       </div>
     <!-- Header Part Start -->
-    <header class="pt-2" style="">
+    <header class="pt-2">
       <div class="contact">
           <div class="align-items-sm-center">
               <div class="text-center">
@@ -112,20 +118,20 @@
   <!-- Header Part End -->
   
   <!-- service section -->
-      <div class="container service-section py-4" style="">
-          <h3 class="text-center">Prestations de service</h3>
+      <div class="container service-section py-4">
+          <h2 class="text-center">Prestations De Service</h2>
           <div class="row m-0 p-0">
               <!-- <div class="col-sm-4"> -->
                   <!-- <img src="images/scooter.png" alt=""> -->
               <!-- </div> -->
               <div class="col-sm-12 text-center">
                   <div class="row">
-                      <div class="col-sm-2"><p class="services">Accidenté</p></div>
-                      <div class="col-sm-2"><p class="services">Dépannage</p></div>
-                      <div class="col-sm-2"><p class="services">Entretien</p></div>
-                      <div class="col-sm-2"><p class="services">Rénovation</p></div>
-                      <div class="col-sm-2"><p class="services">Réparation</p></div>
-                      <div class="col-sm-2"><p class="services">Service Rapide</p></div>
+                      <div class="col-6 col-sm-4 col-md-2"><p class="services">Dépannage</p></div>
+                      <div class="col-6 col-sm-4 col-md-2"><p class="services">Entretien</p></div>
+                      <div class="col-6 col-sm-4 col-md-2"><p class="services">Accidenté</p></div>
+                      <div class="col-6 col-sm-4 col-md-2"><p class="services">Rénovation</p></div>
+                      <div class="col-6 col-sm-4 col-md-2"><p class="services">Réparation</p></div>
+                      <div class="col-6 col-sm-4 col-md-2"><p class="services">Service Rapide</p></div>
                   </div>
               </div>
               <!-- <div class="col-sm-2"> -->
