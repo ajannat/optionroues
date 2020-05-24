@@ -308,7 +308,6 @@
       function submitForm(formId){
         $(".loader").removeClass("hide-content");
         var formData = $("#service-form").serialize();
-        alert("hi")
         $.ajax({
         url: 'mail.php',
         type: 'POST',
