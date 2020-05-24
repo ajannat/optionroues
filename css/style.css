@@ -307,6 +307,58 @@
                     width: 90%;
                 }
             }
+
+
+.services{
+    padding: 5px 5px;
+    margin: 5px 5px;
+    color: #273a41;
+    font-size: 18px;
+    font-family: auto;
+    background-color: #ed3e61;
+    /* border: 1px solid #273a41; */
+    /*ed3e61 e5e1d1 273a41*/
+}
+.service-section{
+    /* min-height: 50vh; */
+    color: #273a41;
+    font-weight: bold;
+    /* background-image: url("images/bike.png"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%;
+}
+.service-section h2{
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+.form-section{
+    background-color: #273a41;
+}
+#service-form{color: #fff;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+        background: url('../images/speedometer.png') no-repeat center;
+}
+.service-form-description p{
+    color: #fff;
+}
+.top{
+    background-color: #ed3e61
+}
+.contact p{
+    font-size: 20px;
+    color: #273a41;
+}
 .backtotop{
     display: block;
     position: fixed;
@@ -327,7 +379,29 @@
     font-size: 20px;
     background: #fff;
     margin: 2px;
-    color: #ffad18;
+    color: #ed3e61;
     text-align: center;
     border-radius: 50%
+}
+.hide-content{
+    display: none;
+}
+.fa-spinner{
+    color: #ed3e61;
+    font-size: 50px;
+    z-index:999;
+    top:50%; 
+    left:50%; 
+    position:fixed;
+}
+  .loader{
+      opacity:0.6;
+      background-color:#273a41; 
+      width:100%; 
+      height:100%; 
+      font-size: 50px;
+      z-index:9;
+      top:0; 
+      left:0; 
+      position:fixed;
 }

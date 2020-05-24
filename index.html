@@ -19,17 +19,17 @@
       <!-- Fontawesome css -->
       <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
       <!-- Swiper css -->
-      <link rel="stylesheet" href="css/swiper.min.css">
+      <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
       <!-- Animate css -->
-      <link rel="stylesheet" href="css/animate.min.css">
+      <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
       <!-- Venbox css -->
-      <link rel="stylesheet" href="css/venobox.css">
+      <!-- <link rel="stylesheet" href="css/venobox.css"> -->
       <!-- Rateyo css -->
-      <link rel="stylesheet" href="css/rateyo.min.css">
+      <!-- <link rel="stylesheet" href="css/rateyo.min.css"> -->
       <!-- Flaticon css -->
-      <link rel="stylesheet" href="css/flaticon.css">
+      <!-- <link rel="stylesheet" href="css/flaticon.css"> -->
       <!-- Magnific css -->
-      <link rel="stylesheet" href="css/magnific-popup.css">
+      <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
       <!-- Main style css -->
       <link rel="stylesheet" href="css/style.css">
       <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -37,62 +37,12 @@
 
   
       <style>
-          .services{
-              padding: 5px 5px;
-              margin: 5px 5px;
-              color: #273a41;
-              font-size: 18px;
-              font-family: auto;
-              background-color: #ed3e61;
-              /* border: 1px solid #273a41; */
-              /*ed3e61 e5e1d1 273a41*/
-          }
-          .service-section{
-              /* min-height: 50vh; */
-              color: #273a41;
-              font-weight: bold;
-            /* background-image: url("images/bike.png"); */
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: 100%;
-          }
-          .service-section h2{
-              font-weight: bold;
-            font-family: 'Playfair Display', serif;
-          }
-          .form-section{
-              background-color: #273a41;
-          }
-          #service-form{color: #fff;
-              padding: 20px 30px;
-              background-color: #fff;
-              box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12);
-  background: url('images/speedometer.png') no-repeat center;
-          }
-          .service-form-description p{
-              color: #fff;
-          }
-          .top{
-            background-color: #ed3e61
-          }
-          .contact p{
-              font-size: 20px;
-              color: #273a41;
-          }
       </style>
   </head>
   
   <body>
-  
-    <div id="body-content">
+    
+    <div id="body-content"><div class="loader hide-content"><i class="fa fa-spinner fa-spin"></i></div>
           <!-- header -->
       <div class="top">
       <div class="header-section pt-4">
@@ -161,7 +111,7 @@
                     renverra un devis complètement personnalisé, par e-mail, dans les heures qui
                     suivent!</p> -->
             </div>
-          <form id="service-form">
+          <form method="POST" action="" id="service-form" onsubmit="submitForm('#service-form'); return false;">
             <div class="service-form-description text-center mb-4">
                 <!-- <h3>Demander votre devis en ligne!</h3> -->
                 <p>Il vous suffit de répondre aux questions suivantes, et notre équipe vous renverra un
@@ -169,35 +119,36 @@
             </div>
               <div class="form-group">
                   <label for="prenom">- Nom et prénom:</label>
-                  <input type="text" class="form-control" id="prenom" placeholder="" required>
+                  <input type="text" class="form-control" name="prenom" placeholder="" required>
               </div>
               <div class="form-group">
                   <label for="marque">- Marque du véhicule:</label>
-                  <input type="text" class="form-control" id="marque" placeholder="" required>
+                  <input type="text" class="form-control" name="marque" placeholder="" required>
               </div>
               <div class="form-group">
                   <label for="modele">- Modèle du véhicule:</label>
-                  <input type="text" class="form-control" id="modele" placeholder="" required>
+                  <input type="text" class="form-control" name="modele" placeholder="" required>
               </div>
               <div class="form-group">
                   <label for="annee">- Année du véhicule:</label>
-                  <input type="text" class="form-control" id="annee" placeholder="" required>
+                  <input type="text" class="form-control" name="annee" placeholder="" required>
               </div>
               <div class="form-group">
                   <label for="numero">- Numéro de série de véhicule inscrit sur la carte grise:</label>
-                  <input type="text" class="form-control" id="numero" placeholder="">
+                  <input type="text" class="form-control" name="numero" placeholder="">
               </div>
               <div class="form-group">
                   <label for="revision">- Date de la dernière révision:</label>
                   <small id="emailHelp" class="form-text text-muted">(JJ/MM/AAAA)</small>
-                  <input type="text" class="form-control" id="revision" placeholder="" required>
+                  <input type="text" class="form-control" name="revisionDate" placeholder="" required>
               </div>
               <div class="form-group">
                   <label for="kilometer">- Kilométrage du véhicule:</label>
-                  <input type="number" class="form-control" id="kilometer" placeholder="" required>
+                  <input type="number" class="form-control" name="kilometer" placeholder="" required>
               </div>
               <div class="form-group">
                   <label for="table">- État du véhicule:</label>
+                  <small id="emailHelp" class="form-text text-muted">(La réponse est obligatoire)</small>
                   <table class="table table-bordered text-center">
                       <thead>
                         <tr>
@@ -211,23 +162,23 @@
                         <tr>
                           <!-- <th scope="row">1</th> -->
                           <td>Pneus</td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
+                          <td><input type="checkbox" class="" name="pneusMauvais" value="Mauvais"></td>
+                          <td><input type="checkbox" class="" name="pneusBon" value="Bon"></td>
+                          <td><input type="checkbox" class="" name="pneusExcellent" value="Excellent"></td>
                         </tr>
                         <tr>
                           <!-- <th scope="row">2</th> -->
                           <td>Plaquettes</td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
+                          <td><input type="checkbox" class="" name="plaquettesMauvais" value="Mauvais"></td>
+                          <td><input type="checkbox" class="" name="plaquettesBon" value="Bon"></td>
+                          <td><input type="checkbox" class="" name="plaquettesExcellent" value="Excellent"></td>
                         </tr>
                         <tr>
                           <!-- <th scope="row">2</th> -->
                           <td>Signalisation</td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
-                          <td><input type="checkbox" class="" id="exampleCheck1"></td>
+                          <td><input type="checkbox" class="" name="signalisationMauvais" value="Mauvais"></td>
+                          <td><input type="checkbox" class="" name="signalisationBon" value="Bon"></td>
+                          <td><input type="checkbox" class="" name="signalisationExcellent" value="Excellent"></td>
                         </tr>
                       </tbody>
                     </table>
@@ -241,47 +192,47 @@
                       Autre)</small>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Révision</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Révision">
+                  <label class="form-check-label">- Révision</label>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Entretien</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Entretien">
+                  <label class="form-check-label">- Entretien</label>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Réparation</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Réparation">
+                  <label class="form-check-label">- Réparation</label>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Service Rapide</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Service Rapide">
+                  <label class="form-check-label">- Service Rapide</label>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Accidenté</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Accidenté">
+                  <label class="form-check-label">- Accidenté</label>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Dépannage</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Dépannage">
+                  <label class="form-check-label">- Dépannage</label>
               </div>
               <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">- Rénovation</label>
+                  <input type="checkbox" class="form-check-input" name="services[]" value="Rénovation">
+                  <label class="form-check-label">- Rénovation</label>
               </div>
               <div class="form-group row">
                   <label for="staticEmail" class="col-sm-2 col-form-label">- Autre: </label>
                   <div class="col-sm-10">
-                      <input type="text" class="form-control" id="staticEmail" value="">
+                      <input type="text" class="form-control" name="autre" value="">
                   </div>
               </div>
               <div class="form-group">
                   <label for="revision">- Pour les travaux plus important, la réparation a lieu dans notre atelier. Nous
                     récupérons le véhicule ou la pièce, et une fois la prestation terminée, nous vous
                     livrons directement votre bien. Choisir:</label>
-                  <small id="emailHelp" class="form-text text-muted">(Les gros chantiers sont les prestations nécessitant plus de 1 ou 2h de main
+                  <small class="form-text text-muted">(Les gros chantiers sont les prestations nécessitant plus de 1 ou 2h de main
                       d'oeuvre, comme les services réparation et accidenté. Exemple de pièce
                       récupérable : moteur, etc.)</small>
-                      <select class="form-control">
+                      <select class="form-control" name="travaux">
                           <option>- Véhicule</option>
                           <option>- Pièce</option>
                       </select>
@@ -289,27 +240,28 @@
               <div class="form-group">
                   <label for="revision">- Nous proposons également une prestation forfait assistance weekend (courses
                       moto, motocross, autres...). Seriez-vous intéressé par cette prestation et connaître le prix du forfait?</label>
-                  <small id="emailHelp" class="form-text text-muted">(Nous ajouterons une ligne informative sur votre devis avec le prix du forfait.)</small>
-                      <select class="form-control">
+                  <small class="form-text text-muted">(Nous ajouterons une ligne informative sur votre devis avec le prix du forfait.)</small>
+                      <select class="form-control" name="egalement">
                           <option>Oui</option>
                           <option>Non</option>
                       </select>
               </div>
               <div class="form-group">
-                  <label for="revision">- Ville et code postal?</label>
-                  <small id="emailHelp" class="form-text text-muted">Lieu où la prestation sera réalisée (résidence ou travail)</small>
-                  <input type="text" class="form-control" id="revision" aria-describedby="emailHelp" placeholder="" required>
+                  <label>- Ville et code postal?</label>
+                  <small class="form-text text-muted">Lieu où la prestation sera réalisée (résidence ou travail)</small>
+                  <input type="text" class="form-control" name="postal" aria-describedby="emailHelp" placeholder="" required>
               </div>
               <div class="form-group">
-                  <label for="revision">- Numéro de téléphone?</label>
-                  <input type="text" class="form-control" id="revision" aria-describedby="emailHelp" placeholder="" required>
+                  <label>- Numéro de téléphone?</label>
+                  <input type="text" class="form-control" name="phone" placeholder="" required>
               </div>
               <div class="form-group">
-                  <label for="revision">- Adresse e-mail?</label>
-                  <input type="email" class="form-control" id="revision" aria-describedby="emailHelp" placeholder="" required>
+                  <label>- Adresse e-mail?</label>
+                  <input type="email" class="form-control" name="email" placeholder="" required>
               </div>
               <div class="submit-button text-center">
-                  <button type="submit" class="btn" style="width: 100%; color: #fff; background-color: #ed3e61;">Soumettre</button>
+                <button onclick="submitFormmm()" class="btn" style="width: 100%; color: #fff; background-color: #ed3e61;">submit</button>
+                <!-- <input type="submit" value="Soumettre" class="btn" style="width: 100%; color: #fff; background-color: #ed3e61;" name="submitForm"> -->
               </div>
           </form>
           </div>
@@ -322,30 +274,58 @@
                 <p style="padding-top: 20px;">Copyright © 2020  @ all rights reserved by <span style="color: #ed3e61;">Option2Roues</span></p>
             </div>
         </footer>
+        <button type="button" id="modal-button" class="btn btn-primary hide-content" data-toggle="modal" data-target="#successModal">
+        </button>
+
+        <!-- success modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <!-- <div class="modal-header"> -->
+                  <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
+                  <!-- <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button> -->
+                <!-- </div> -->
+                <div class="modal-body text-center">
+                  <p>Option2roues vous remercie ! Pour toute autre demande, contactez-nous via notre
+                    e-mail ou bien au 06.31.31.30.73</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" onclick="window.location.reload()" class="btn" style="width: 100%; color: #fff; background-color: #ed3e61;" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
   
   <!--js Library  -->
   <script src="js/jquery.min.js"></script>
-  <!--Popper js  -->
-  <script src="js/popper.min.js"></script>
-  <!--Bootstrap min js  -->
   <script src="js/bootstrap.min.js"></script>
-  <!--Plugins   -->
-  <script src="js/plugins.js"></script>
-  <!--Gmap3 js  -->
-  <script src="js/gmap3.min.js"></script>
-  <!--Knob Js  -->
-  <script src="js/jquery.knob.min.js"></script>
-  <!--Appear Js  -->
-  <script src="js/jquery.appear.js"></script>
-  <!--parallax-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-  <!--Swipper Runner  -->
-  <script src="js/swiperRunner.min.js"></script>
-  <!--Google map api -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsBrMPsyNtpwKXPPpG54XwJXnyobfMAIc"></script>
-  <!--Custom js  -->
-  <script src="js/custom.js"></script>
+
+  <script>
+      function submitForm(formId){
+        $(".loader").removeClass("hide-content");
+        var formData = $("#service-form").serialize();
+        alert("hi")
+        $.ajax({
+        url: 'mail.php',
+        type: 'POST',
+        data: formData,
+        success:function(response){
+           if(response == 1){
+            $(".loader").addClass("hide-content");
+            $("#modal-button").click();
+           }
+        },
+        error: function(response){
+            $(".loader").addClass("hide-content");
+            alert(response);
+        }
+   });
+      }
+  </script>
   
   </body>
   
